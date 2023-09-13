@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /* border: 1px solid red; */
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+}
+
+/* Style the table header */
+
+/* Style the table rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style the table cells */
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Hover effect on rows */
+tr:hover {
+  background-color: #ddd;
+}
+/* X-Small devices (portrait phones, less than 576px)*/
+td:nth-child(1) {
+  width: 5%;
+}
+td:nth-child(2) {
+  width: 80%;
+}
+td:nth-child(3) {
+  width: 10%;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  td:nth-child(1) {
+    background-color: #f2f2f2;
+  }
+}

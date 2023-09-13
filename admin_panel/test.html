@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Image Upload</title>
+    <!-- <link rel="stylesheet" href="./index.css" /> -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+  </head>
+  <body>
+    <div class="imageUpload1">
+      <input
+        type="file"
+        class="inp1"
+        onchange="getImageData1(event)"
+        accept=".pdf"
+      />
+      <button onclick="selectImage1()" class="selectImage1">
+        Select Images
+      </button>
+      <span class="filedata1"></span>
+      <div class="progressBar1">
+        <div class="progress1"></div>
+      </div>
+      <button onclick="uploadImage1()" class="upload1">Upload</button>
+      <span class="loading1">Loading...</span>
+      <img class="img1" />
+    </div>
+
+    <div class="imageUpload2">
+      <input
+        type="file"
+        class="inp2"
+        onchange="getImageData2(event)"
+        accept=".pdf"
+      />
+      <button onclick="selectImage2()" class="selectImage2">
+        Select Images
+      </button>
+      <span class="filedata2"></span>
+      <div class="progressBar2">
+        <div class="progress2"></div>
+      </div>
+      <button onclick="uploadImage2()" class="upload2">Upload</button>
+      <span class="loading2">Loading...</span>
+      <img class="img2" />
+    </div>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyA-bJ7DwH5AOwSRusqruyLptNY-k43XpZc",
+        authDomain: "tod-app1.firebaseapp.com",
+        databaseURL: "https://tod-app1-default-rtdb.firebaseio.com",
+        projectId: "tod-app1",
+        storageBucket: "tod-app1.appspot.com",
+        messagingSenderId: "85061404608",
+        appId: "1:85061404608:web:342b54a433fe7bbc2c6a25",
+        measurementId: "G-F3VZDB5S7B",
+      };
+
+      const app = firebase.initializeApp(firebaseConfig);
+
+      const storage = firebase.storage();
+
+      const inp1 = document.querySelector(".inp1");
+      const progressbar1 = document.querySelector(".progress1");
+      const img1 = document.querySelector(".img1");
+      const fileData1 = document.querySelector(".filedata1");
+      const loading1 = document.querySelector(".loading1");
+      let file1;
+      let fileName1;
+      let progress1;
+      let isLoading1 = false;
+      let uploadedFileName1;
+      const selectImage1 = () => {
+        inp1.click();
+      };
+      const getImageData1 = (e) => {
+        file1 = e.target.files[0];
+        fileName1 = Math.round(Math.random() * 9999) + file1.name;
+        if (fileName1) {
+          fileData1.style.display = "block";
+        }
+        fileData1.innerHTML = fileName1;
+        console.log(file1, fileName1);
+      };
+
+      const uploadImage1 = () => {
+        loading1.style.display = "block";
+        const storageRef1 = storage.ref().child("notice");
+        const folderRef1 = storageRef1.child(fileName1);
+        const uploadtask1 = folderRef1.put(file1);
+        uploadtask1.on(
+          "state_changed",
+          (snapshot1) => {
+            console.log("snapshot1", snapshot1.ref.name);
+            progress1 =
+              (snapshot1.bytesTransferred / snapshot1.totalBytes) * 100;
+            progress1 = Math.round(progress1);
+            progressbar1.style.width = progress1 + "%";
+            progressbar1.innerHTML = progress1 + "%";
+            uploadedFileName1 = snapshot1.ref.name;
+          },
+          (error1) => {
+            console.log(error1);
+          },
+          () => {
+            storage
+              .ref("notice")
+              .child(uploadedFileName1)
+              .getDownloadURL()
+              .then((url) => {
+                console.log("URL", url);
+                if (!url) {
+                  img1.style.display = "none";
+                } else {
+                  img1.style.display = "block";
+                  loading1.style.display = "none";
+                }
+                img1.setAttribute("src", url);
+              });
+            console.log("File Uploaded Successfully");
+          }
+        );
+      };
+    </script>
+
+    <script>
+      const inp2 = document.querySelector(".inp2");
+      const progressbar2 = document.querySelector(".progress2");
+      const img2 = document.querySelector(".img2");
+      const fileData2 = document.querySelector(".filedata2");
+      const loading2 = document.querySelector(".loading2");
+      let file2;
+      let fileName2;
+      let progress2;
+      let isLoading2 = false;
+      let uploadedFileName2;
+      const selectImage2 = () => {
+        inp2.click();
+      };
+      const getImageData2 = (e) => {
+        file2 = e.target.files[0];
+        fileName2 = Math.round(Math.random() * 9999) + file2.name;
+        if (fileName2) {
+          fileData2.style.display = "block";
+        }
+        fileData2.innerHTML = fileName1;
+        console.log(file2, fileName2);
+      };
+
+      const uploadImage2 = () => {
+        loading2.style.display = "block";
+        const storageRef2 = storage.ref().child("result");
+        const folderRef2 = storageRef2.child(fileName2);
+        const uploadtask2 = folderRef2.put(file2);
+        uploadtask2.on(
+          "state_changed",
+          (snapshot2) => {
+            console.log("snapshot2", snapshot2.ref.name);
+            progress2 =
+              (snapshot2.bytesTransferred / snapshot2.totalBytes) * 100;
+            progress2 = Math.round(progress2);
+            progressbar2.style.width = progress2 + "%";
+            progressbar2.innerHTML = progress2 + "%";
+            uploadedFileName2 = snapshot2.ref.name;
+          },
+          (error2) => {
+            console.log(error2);
+          },
+          () => {
+            storage
+              .ref("result")
+              .child(uploadedFileName2)
+              .getDownloadURL()
+              .then((url) => {
+                console.log("URL", url);
+                if (!url) {
+                  img2.style.display = "none";
+                } else {
+                  img2.style.display = "block";
+                  loading2.style.display = "none";
+                }
+                img2.setAttribute("src", url);
+              });
+            console.log("File Uploaded Successfully");
+          }
+        );
+      };
+    </script>
+  </body>
+</html>

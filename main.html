@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+     <link rel="stylesheet" href="./css/main.css">
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+         google.charts.load("current", {packages:["corechart"]});
+         google.charts.setOnLoadCallback(drawChart);
+         function drawChart() {
+           var data = google.visualization.arrayToDataTable([
+             ['Class', 'Students'],
+            
+         ['SixKA-' ,60],['SixKHA-' ,60],['Nine-Science' ,100],['Ten-Humanites' ,80],['NineKAScience' ,70],		 
+           ]);
+         
+           var options = {
+             title: 'Summary Of Present Students',
+             is3D: true,
+           };
+         
+           var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+           chart.draw(data, options);
+         }
+      </script>
+      <title>Golli High School</title>
+      <link rel="icon" type="image/png" href="./img/school-logo.png">
+   </head>
+   <body>
+      <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+      <!-- header section start  -->
+      <div class="container" >
+        <div class="main_hearder">
+           <div class="logu-left">
+              <div class="logu-left-content">
+                 <a href="">  <img src="./img/school-logo.png" alt="img" class="logu" ></a>
+              </div>
+           </div>
+           <div class="mainheader">
+              <div class="mainheader-content mt-4">
+                 <h1> গল্লি উচ্চ বিদ্যালয়  </h1>
+                 <p class="mainp" > মির্জাপুর ,  টাংগাইল  </p>
+              </div>
+           </div>
+           
+        </div>
+     </div>
+     <div class="container text-center" >
+        <div class="row">
+           <div class="col-sm-12">
+              <div class="marquree" >
+                 <marquee behavior="scroll"  direction="left" scrollamount="4" onmouseover="this.stop()" onmouseout="this.start()"> 
+                    <a class="mar_link"  href="#"><span>&nbsp; *** &nbsp; </span>ধন্যবাদ<span>&nbsp; *** &nbsp; </span> </a>
+                    <a class="mar_link"  href="#"><span>&nbsp; *** &nbsp; </span>গল্লি উচ্চ বিদ্যালয় এর অফিশিয়াল ওয়েব সাইটের(golli.edu.bd) আপডেটের কাজ চলছে<span>&nbsp; *** &nbsp; </span> </a>
+                 </marquee>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="container" >
+        <div class="navpadding">
+           <div class="topnav" id="myTopnav">
+              <a href="#" class="active_home"> <i class="fas fa-home"></i> হোম </a>
+              <a href="#"> স্কুল পরিচিতি </a>
+              <a href="#">রেজাল্ট   </a>
+              <div class="dropdown1">
+                 <button class="dropbtn">প্রশাসন 
+                 <i class="fa fa-caret-down"></i>
+                 </button>
+                 <div class="dropdown-content">
+                    <a href="#">শিক্ষক-কর্মচারী   </a>
+                    <a href="#">কমিটি</a>
+                 </div>
+              </div>
+              <a href="#">যোগাযোগ</a>
+              <div class="dropdown1">
+                 <button class="dropbtn">সুবর্ণজয়ন্তী কর্ণার
+                 <i class="fa fa-caret-down"></i>
+                 </button>
+                 <div class="dropdown-content">
+                    <a href="#">বার্তা   </a>
+                    <a href="#">ছবি গ্যালারি</a>
+                    <a href="#">ভিডিও</a>
+                 </div>
+              </div>
+              <div class="dropdown1">
+                 <button class="dropbtn">গ্যালারি 
+                 <i class="fa fa-caret-down"></i>
+                 </button>
+                 <div class="dropdown-content">
+                    <a href="#">ইমেজ  </a>
+                    <a href="#">ভিডিও </a>
+                 </div>
+              </div>
+              <div class="dropdown1">
+                 <button class="dropbtn">বিগত বোর্ড পরীক্ষার ফল
+                 <i class="fa fa-caret-down"></i>
+                 </button>
+                 <div class="dropdown-content">
+                    <a href="#">জে এস সি  </a>
+                    <a href="#">এস এস সি</a>
+                 </div>
+              </div>
+              <div class="dropdown1">
+                 <button class="dropbtn">অন্যান্য  তথ্য
+                 <i class="fa fa-caret-down"></i>
+                 </button>
+                 <div class="dropdown-content">
+                    <a href="#">বর্তমান  শিক্ষার্থী   </a>
+                    <a href="#">অবদান</a>
+                    <a href="exstu">কৃতি     শিক্ষার্থী  </a>
+                    <a href="talen">বৃত্তি    , উপ-বৃত্তি  </a>
+                    <a href="magazine">ম্যাগাজিন</a>
+                    <a href="blood"> রক্ত দান</a>
+                 </div>
+              </div>
+              <a href="#" target="_blank">লগইন  </a>
+              <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+           </div>
+        </div>
+     </div>
+      <!-- header section end  -->
+      <!-- main section start  -->
+      <section class="main_section container ">
+        <div class="row">
+            <!-- left section start -->
+            <div class="main_left_side col-12 col-md-8 col-lg-8">
+                <!-- carousel section start  -->
+                <div id="carouselExampleSlidesOnly" class="carousel slide mb-3" data-bs-ride="">
+                    <!-- carousel -->
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <imgsrc="./img/ssssssssssss.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <imgsrc="./img/ssssssssssss.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <imgsrc="./img/ssssssssssss.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    </div>
+                </div>
+                <!-- carousel section end  -->
+                <!-- Head_master and Charman greetings section start  -->
+                <div class="panel panel-primary mb-4 ">
+                    <div class="panel-heading-color">
+                    &nbsp; প্রধান শিক্ষকের শুভেচ্ছা বাণী 
+                    </div>
+                    <div class="panel-body" style="font-size:16px;">
+                        <p class="p-2"> শিক্ষাই জাতির মেরুদন্ড। কাজেই সবার জন্য শিক্ষা অর্জন করা মানুষের মৌলিক অধিকার। এ অধিকারকে যথাযথভাবে বাস্তবায়নের মাধ্যমে বিশ্বের অনেক দেশ আজ উন্নত দেশ হিসেবে উন্নতির চরম শিখরে আরোহণ করেছে। এ ক্ষেত্রে বাংলাদেশ তার কাঙ্ক্ষিত লক্ষ্য অর্জনে সাধ্যমত চেষ্টা চালিয়ে যাচ্ছে। যুগের সাথে সংগতিপূর্ণ বিকাশের জন্য আমরা প্রত্যেকেই ভাবি নিজ নিজ সন্তানদের নিয়ে। প্রকৃতির সন্তান 			<span id="dots1">...</span> <span id="more1">
+                            </span>
+                        </p>
+                        <button onclick="myFunction1()" id="myBtn1" class="btn btn-info ms-3">Read more</button>            
+                    </div>
+                    <div class="panel-footer p-2 " style="font-size:16px;" >
+                    মোঃ আব্দুল মোত্তালেব <br>
+                    প্রধান শিক্ষক, গল্লি উচ্চ বিদ্যালয়	
+                    </div>
+                </div>
+                <div class="panel panel-primary mb-4 ">
+                    <div class="panel-heading-color">
+                    &nbsp; সভাপতির শুভেচ্ছা বাণী 
+                    </div>
+                    <div class="panel-body p-2" style="font-size:16px;">
+                    <p>
+                        শিক্ষাই জাতির মেরুদন্ড। কাজেই সবার জন্য শিক্ষা অর্জন করা মানুষের মৌলিক অধিকার। এ অধিকারকে যথাযথভাবে বাস্তবায়নের মাধ্যমে বিশ্বের অনেক দেশ আজ উন্নত দেশ হিসেবে উন্নতির চরম শিখরে আরোহণ করেছে। এ ক্ষেত্রে বাংলাদেশ তার কাঙ্ক্ষিত লক্ষ্য অর্জনে সাধ্যমত চেষ্টা চালিয়ে যাচ্ছে। যুগের সাথে সংগতিপূর্ণ বিকাশের জন্য আমরা প্রত্যেকেই ভাবি নিজ নিজ সন্তানদের নিয়ে। প্রকৃতির সন্তান 			<span id="dots2">...</span> <span id="more2">
+                        মানব শিশুকে পরিশুদ্ধ হতে হয়, পরিপুর্ণ হতে হয় স্বীয় সাধনায়। এ ক্ষেত্রে শিক্ষায় হলো আমাদের মূলমন্ত্র। আমরা দৃঢ়ভাবে বিশ্বাস করি শিক্ষার মৌলিক উদ্দেশ্য হলো আচরণের কাঙ্ক্ষিত পরিবর্তন। আর এ লক্ষ্যে তাদেরকে সৃজনশীল, স্বাধীন, সক্রিয় এবং দায়িত্বশীল সুনাগরিক হিসেবে গড়ে তোলা। এ জন্য প্রয়োজন যোগ্য শিক্ষকমন্ডলী এবং উপযুক্ত শিক্ষাদান পদ্ধতির সমন্বয়ে একটি শিক্ষাবান্ধব পরিবেশ। আমি বিনয়ের সাথে দাবী করি, থানাহাট এ ইউ পাইলট সরকারী উচ্চ বিদ্যালয়ে এসব কিছুর সমন্বয় ঘটানো সম্ভব হয়েছে। 			</span>
+                    </p>
+                    <button onclick="myFunction2()" id="myBtn2" class="btn btn-info">Read more</button>
+                            
+                    </div>
+                    <div class="panel-footer p-2" style="font-size:16px;" >
+                    মোঃ ফারুক আজম<br>
+                    সভাপতি, গল্লি উচ্চ বিদ্যালয়		
+                    </div>
+                </div>
+                <!-- Head_master and Charman greetings section end  -->
+                <!-- left section end -->
+            </div>
+            
+            <!-- right section start -->
+            <div class="main_right_side col-12 col-md-4 col-lg-4">
+                <div class="panel panel-primary mb-4">
+                <!-- Notice Board Start-->
+                <div class="panel-heading-color">
+                    &nbsp; নোটিশ বোর্ড
+                </div>
+                <div class="panel-body" style="text-align: center; height :auto; ">
+                    <div style="font-size:16px; padding:5px ; margin-bottom:5px;" >
+                        <a class="notice_link"  href="#"> ** ধন্যবাদ  **</a>
+                    </div>
+                    <div style="font-size:16px; padding:5px ; margin-bottom:5px;" >
+                        <a class="notice_link"  href="#"> **  গল্লি উচ্চ বিদ্যালয় এর অফিশিয়াল ওয়েব সাইটের(golli.edu.bd) আপডেটের কাজ চলছে  **</a>
+                    </div>
+                </div>
+                </div>
+                <div class="panel panel-primary mb-4">
+                    <div class="panel-heading-color">
+                        &nbsp;  সভাপতি  
+                    </div>
+                    <div class="panel-body">
+                        <img src="./img/chearman.jpg" alt="Image" class="teacher-image" >
+                    </div>
+                    <div class="panel-footer text-center" style="font-size:16px;" >
+                        মোঃ ফারুক আজম 		
+                    </div>
+                </div>
+                <div class="panel panel-primary mb-4">
+                    <div class="panel-heading-color">
+                        &nbsp; প্রধান শিক্ষক 
+                    </div>
+                    <div class="panel-body">
+                        <img src="./img/chearman.jpg" alt="Image" class="teacher-image" >
+                    </div>
+                    <div class="panel-footer text-center" style="font-size:16px;" >
+                        মোঃ আব্দুল মোত্তালেব 		
+                    </div>
+                </div>
+                <div class="panel panel-primary mb-4">
+                    <div class="panel-heading-color">
+                        &nbsp;  বর্তমান শিক্ষার্থী   
+                    </div>
+                    <div class="panel-body">
+                        <div id="piechart_3d" ></div>
+                    </div>
+                </div>
+                <div class="panel panel-primary mb-4">
+                    <div class="panel-heading-color">
+                        &nbsp;  প্রয়োজনীয় ওয়েবসাইট লিংক 
+                    </div>
+                    <div class="panel-body">
+                        <h4> <a  class="notice_link" href="http://www.educationboardresults.gov.bd/"					  
+                            target="_blank" > &clubs;	বোর্ড পরীক্ষার ফলাফল </a> </h4>
+                        <h4> <a class="notice_link" href="http://www.dinajpureducationboard.gov.bd/"					  
+                            target="_blank"  > &clubs;	দিনাজপুর শিক্ষাবোর্ড(1) </a></h4>
+                        <h4> <a class="notice_link" href="http://dinajpurboard.gov.bd/"					  
+                            target="_blank"  > &clubs;	দিনাজপুর শিক্ষাবোর্ড(2) </a></h4>
+                        <h4> <a class="notice_link" href="https://moedu.gov.bd/"					  
+                            target="_blank" > &clubs;	 শিক্ষা মন্ত্রণালয়    </a></h4>
+                        <h4><a class="notice_link" href="http://www.dshe.gov.bd/"					  
+                            target="_blank" > &clubs;	মাধ্যমিক ও উচ্চ শিক্ষা অধিদপ্তর  </a></h4>
+                        <h4><a class="notice_link" href="http://www.nctb.gov.bd/"					  
+                            target="_blank" > &clubs;	 জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড </a></h4>
+                        <h4><a class="notice_link" href="http://www.teachers.gov.bd/"					  
+                            target="_blank" > &clubs;	শিক্ষক বাতায়ন </a></h4>
+                        <h4><a class="notice_link" href="http://emis.gov.bd/emis"					  
+                            target="_blank"  > &clubs;	EDUCATION MAN. INFO. SYSTEM (EMIS) </a></h4>
+                        <h4><a class="notice_link" href="http://shed.gov.bd/"					  
+                            target="_blank" > &clubs;	মাধ্যমিক ও উচ্চ শিক্ষা বিভাগ  </a></h4>
+                        <h4><a class="notice_link" href="http://muktopaath.gov.bd/ "					  
+                            target="_blank" > &clubs;	মুক্তপাঠ </a><br></h4>
+                        <h4><a class="notice_link" href="http://banbeis.gov.bd/"					  
+                            target="_blank" > &clubs;	ব্যানবেইস </a><br></h4>
+                        <h4><a class="notice_link" href="http://pmeat.gov.bd/"					  
+                            target="_blank" > &clubs;	প্রধানমন্ত্রীর শিক্ষা সহায়তা ট্রাস্ট</a><br></h4>
+                        <h4><a class="notice_link" href="https://bsbk.portal.gov.bd/apps/bangla-converter/index.html"					  
+                            target="_blank" > &clubs;	 বিজয়  - ইউনিকোড  কনভার্টার </a></h4>
+                        <h4><a class="notice_link" href="https://mail.google.com"					  
+                            target="_blank" > &clubs;	 G-mail </a></h4>
+                    </div>
+                </div>
+                <div class="panel panel-primary mb-4">
+                    <div class="panel-heading-color">
+                        &nbsp;  হেল্পলাইন   
+                    </div>
+                    <div class="panel-body">
+                        <img src="images/helpline.jpg" alt="Image" style="max-width:300px;"  >
+                        <img src="./img/helpline.jpg" alt="Image" style="max-width:300px;"  >
+                    </div>
+                </div>
+                
+            </div>
+            <!-- right section end -->
+            
+        </div>
+      </section>
+      <!-- main section end  -->
+      
+      
+      <!-- greetings ‍section start  -->
+      <!-- greetings ‍section end  -->
+
+    
+      <div class="container">
+         <div class="footer-content">
+            <div class="row">
+               <div class="col-sm-4">
+                  <div class="footer-column1">
+                     <h2 style="color:white; text-align:center;">Contact Us</h2>
+                     <h4 style="color:white; text-align:center;" > Mirzapur High School</h4>
+                     <h4  style="color:white; text-align:center;"> Birol , Dinajpur-5210 </h4>
+                     <h4 style="color:white; text-align:center;">EIIN No : 120167</h4>
+                     <h4 style="color:white; text-align:center;"> <i class="fas fa-phone-square-alt">  </i> 01716650106</h4>
+                     <h4 style="color:white; text-align:center;"> <i class="far fa-envelope"></i> mzhs120167@gmail.com</h4>
+                     <div class="social-content">
+                        <div class="footer-social-links">
+                           <a href="#">
+                           <i class="fab fa-facebook"></i>
+                           </a>
+                           <a href="#">
+                           <i class="fab fa-twitter"></i>
+                           </a>
+                           <a href="#">
+                           <i class="fab fa-instagram"></i>
+                           </a>
+                           <a href="#">
+                           <i class="fab fa-youtube"></i>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-4">
+                  <div class="footer-column2" >
+                     <img src="dashboard/uploads/mirzapur200-removebg-preview.png" alt="Image" class="footor-logu" height="140px"  width="140px">
+                     <h4 style="color:white; text-align:center;">Copyright © 2022 . All Right Reserved </h4>
+                  </div>
+               </div>
+               <div class="col-sm-4">
+                  <div class="footer-column3">
+                     <h3 style="color:white; ">Links</h3>
+                     <h4 style="color:white;"> <a target="_blank" href="https://ss3.ancovabd.com/schoollogin"					  
+                        style="color:white;"> &clubs; School Login </a></h4>
+                     <h4 style="color:white;"> <a target="_blank" href="https://ss3.ancovabd.com/teacherlogin"					  
+                        style="color:white;"> &clubs; Teacher Login </a></h4>
+                     <h4 style="color:white;"> <a href="notice"					  
+                        style="color:white;"> &clubs; Notice </a></h4>
+                     <br>
+                     <h4 style="color:white; ">Powered By</h4>
+                     <div class="power-logu">
+                        <a href="http://ancovabd.com/" target="_blank"> <img src="images/ancovabr.png" alt="Image"   height="auto"  width="140px"></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script>
+         //Get the button
+         var mybutton = document.getElementById("myBtn");
+         
+         // When the user scrolls down 20px from the top of the document, show the button
+         window.onscroll = function() {scrollFunction()};
+         
+         function scrollFunction() {
+           if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+             mybutton.style.display = "block";
+           } else {
+             mybutton.style.display = "none";
+           }
+         }
+         
+         // When the user clicks on the button, scroll to the top of the document
+         function topFunction() {
+           document.body.scrollTop = 0;
+           document.documentElement.scrollTop = 0;
+         }
+      </script>
+      <script src="./js/bootstrap.bundle.js"></script>
+      </div>
+   </body>
+</html>

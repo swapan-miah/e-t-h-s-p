@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Image Upload</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+  </head>
+  <body>
+    <div class="imageUpload1">
+      <input
+        type="file"
+        class="inp1"
+        onchange="getImageData1(event)"
+        accept=".pdf"
+      />
+      <button onclick="selectImage1()" class="selectImage1">
+        Select Images
+      </button>
+      <span class="filedata1"></span>
+      <div class="progressBar1">
+        <div class="progress1"></div>
+      </div>
+      <button onclick="uploadImage1()" class="upload1">Upload</button>
+      <span class="loading1">Loading...</span>
+      <img class="img1" />
+    </div>
+    <hr />
+    <div class="imageUpload2">
+      <input
+        type="file"
+        class="inp2"
+        onchange="getImageData2(event)"
+        accept=".pdf"
+      />
+      <button onclick="selectImage2()" class="selectImage2">
+        Select Images
+      </button>
+      <span class="filedata2"></span>
+      <div class="progressBar2">
+        <div class="progress2"></div>
+      </div>
+      <button onclick="uploadImage2()" class="upload2">Upload</button>
+      <span class="loading2">Loading...</span>
+      <img class="img2" />
+    </div>
+    <script src="./add_files.js"></script>
+  </body>
+</html>
